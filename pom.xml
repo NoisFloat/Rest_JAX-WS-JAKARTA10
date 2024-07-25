@@ -56,8 +56,6 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
-
-        <!-- AGREGAREMOS NUESTRAS DEPENDENCIAS -->
         <!-- MYSQL -->
         <dependency>
             <groupId>mysql</groupId>
@@ -70,30 +68,8 @@
             <artifactId>jakarta.ws.rs-api</artifactId>
             <version>3.1.0</version>
         </dependency>
-        <!-- JERSEY 2.19 -->
-        <dependency>
-            <groupId>org.glassfish.jersey.containers</groupId>
-            <artifactId>jersey-container-servlet</artifactId>
-            <version>2.19</version>
-        </dependency>
-        <dependency>
-            <groupId>org.glassfish.jersey.core</groupId>
-            <artifactId>jersey-server</artifactId>
-            <version>2.19</version>
-        </dependency>
-        <dependency>
-            <groupId>org.glassfish.jersey.core</groupId>
-            <artifactId>jersey-client</artifactId>
-            <version>2.19</version>
-        </dependency>
+        <!-- Dependencias que me tomare mientras esto avanza de la guia-->
 
-        <!-- JACKSON el parser json -->
-        <dependency>
-            <groupId>org.glassfish.jersey.media</groupId>
-            <artifactId>jersey-media-json-jackson</artifactId>
-            <version>2.19</version>
-            <scope>runtime</scope>
-        </dependency>
 
         <!-- JACKSON anotaciones 2.5.1 -->
         <dependency>
@@ -102,7 +78,35 @@
             <version>2.5.1</version>
             <type>jar</type>
         </dependency>
-        <!-- FIN DE NUESTRAS DEPENDENCIAS -->
+        <!-- JACKSON el parser json -->
+        <dependency>
+            <groupId>org.glassfish.jersey.media</groupId>
+            <artifactId>jersey-media-json-jackson</artifactId>
+            <version>3.0.0</version>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!-- Dependencia para Jackson Annotations -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>2.14.0</version>
+        </dependency>
+
+        <!-- Dependencia para Jackson Databind -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.14.0</version>
+        </dependency>
+
+        <!-- Dependencia para Jackson Core -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>2.14.0</version>
+        </dependency>
+
     </dependencies>
 
     <build>
