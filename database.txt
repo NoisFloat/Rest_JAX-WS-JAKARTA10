@@ -1,0 +1,37 @@
+-- ----------------------------------------------------------------
+-- DATABASE presupuesto
+-- ----------------------------------------------------------------
+CREATE DATABASE presupuesto
+ CHARACTER SET `latin1`
+ COLLATE `latin1_swedish_ci`;
+Use presupuesto;
+-- --------------------------------------------------------------
+--
+-- TABLE categoria
+-- --------------------------------------------------------------
+--
+CREATE TABLE presupuesto.categoria
+(
+ id int(11) NOT NULL AUTO_INCREMENT,
+ nombre varchar(1000)
+ CHARACTER SET latin1
+ COLLATE latin1_swedish_ci
+ NULL,
+ PRIMARY KEY(id)
+);
+-- ----------------------------------------------------------------
+-- TABLE concepto
+-- ----------------------------------------------------------------
+CREATE TABLE `concepto` (
+ `id` int(11) NOT NULL AUTO_INCREMENT,
+ `nombre` varchar(1000) DEFAULT NULL,
+ `categoria_id` int(11) DEFAULT NULL,
+ `valor` double DEFAULT NULL,
+ PRIMARY KEY (`id`),
+ KEY `concepto_ibfk_1` (`categoria_id`),
+ CONSTRAINT `concepto_ibfk_1` FOREIGN KEY (`categoria_id`) REFERENCES
+`categoria` (`id`)
+) ;
+insert into categoria (id, nombre) values (1,'Salidas'),(2,'Recibos');
+INSERT INTO `concepto` (`id`, `nombre`, `categoria_id`, `valor`) VALUES (NULL,
+'Viaje a la Playa', '1', '80');
